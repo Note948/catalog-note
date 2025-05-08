@@ -86,7 +86,6 @@ note_demo_raw = [
     (1, 'Istoria Marii Britanii Și A Sua',  10, 1, '2025-02-20'),
     (1, 'Istoria Marii Britanii Și A Sua',  10, 1, '2024-12-12'),
     (1, 'Istoria Marii Britanii Și A Sua',  10, 1, '2024-10-17'),
-    (1, 'Informatică', 10, 1, '2025-01-8'),
     (1, 'Informatică', 9, 1, '2024-11-14'),
     (1, 'Istorie',10,1,'2025-01-10'),
     (1, 'Istorie',10,1,'2024-11-15'),
