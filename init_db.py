@@ -133,7 +133,7 @@ for elev_id, materie, nota, count, data in note_demo_raw:
 c.executemany("INSERT INTO note (elev_id, materie_id, nota, data) VALUES (?, ?, ?, ?)", note_demo)
 # 1 e bun
 absente_demo_raw = [
-    (1, 'Biologie', '2025-05-06', 0),
+    (1, 'Biologie', '2025-05-05', 0),
     (1, 'Biologie', '2025-04-03', 1),
     (1, 'Biologie', '2025-04-02', 1),
     (1, 'Biologie', '2025-03-27', 1),
@@ -162,6 +162,7 @@ absente_demo_raw = [
     (1, 'Educație Antreprenorială', '2025-02-12', 1),
     (1, 'Educație Antreprenorială', '2025-01-22', 1),
     (1, 'Educație Muzicală', '2025-03-11', 1),
+    (1, 'Fizică', '2025-05-06', 0),
     (1, 'Fizică', '2025-04-04', 1),
     (1, 'Fizică', '2025-04-02', 1),
     (1, 'Fizică', '2025-04-01', 1),
@@ -190,8 +191,6 @@ absente_demo_raw = [
     (1, 'Limba Engleză', '2025-03-10', 1),
     (1, 'Limba Engleză', '2025-02-12', 1),
     (1, 'Limba Engleză', '2025-01-22', 1),
-    (1, 'Limba Engleză', '2025-05-05', 1),
-    (1, 'Limba Engleză', '2025-05-05', 1),
     (1, 'Limba Engleză', '2025-01-20', 1),
     (1, 'Limba Engleză', '2025-01-17', 1),
     (1, 'Limba Engleză', '2024-11-22', 1),
@@ -209,6 +208,7 @@ absente_demo_raw = [
     (1, 'Limba Franceză', '2024-11-19', 1),
     (1, 'Limba Franceză', '2024-10-03', 1),
     (1, 'Limba Franceză', '2024-10-01', 1),
+    (1, 'Limba Română', '2025-05-06', 0),
     (1, 'Limba Română', '2025-04-04', 1),
     (1, 'Limba Română', '2025-04-01', 1),
     (1, 'Limba Română', '2025-03-11', 1),
@@ -221,6 +221,7 @@ absente_demo_raw = [
     (1, 'Limba Română', '2024-10-04', 1),
     (1, 'Limba Română', '2024-10-01', 1),
     (1, 'Limba Română', '2024-9-30', 1),
+    (1, 'Matematică', '2025-05-06', 1),
     (1, 'Matematică', '2025-04-03', 1),
     (1, 'Matematică', '2025-04-02', 1),
     (1, 'Matematică', '2025-04-01', 1),
