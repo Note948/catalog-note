@@ -210,6 +210,7 @@ absente_demo_raw = [
     (1, 'Limba Franceză', '2024-11-19', 1),
     (1, 'Limba Franceză', '2024-10-03', 1),
     (1, 'Limba Franceză', '2024-10-01', 1),
+    (1, 'Limba Română', '2025-04-28', 0),
     (1, 'Limba Română', '2025-04-04', 1),
     (1, 'Limba Română', '2025-04-01', 1),
     (1, 'Limba Română', '2025-03-31', 0),
