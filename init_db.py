@@ -133,7 +133,7 @@ for elev_id, materie, nota, count, data in note_demo_raw:
 c.executemany("INSERT INTO note (elev_id, materie_id, nota, data) VALUES (?, ?, ?, ?)", note_demo)
 # 1 e bun
 absente_demo_raw = [
-    (1, 'Biologie', '2025-05-06', 0)
+    (1, 'Biologie', '2025-05-06', 0),
     (1, 'Biologie', '2025-04-03', 1),
     (1, 'Biologie', '2025-04-02', 1),
     (1, 'Biologie', '2025-03-27', 1),
