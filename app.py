@@ -4,6 +4,16 @@ import sqlite3
 
 app = Flask(__name__)
 
+def calculeaza_media(note_dict):
+    note_totale = []
+    for lista in note_dict.values():
+        for n in lista:
+            note_totale.append(n['nota'])
+    if note_totale:
+        return round(sum(note_totale) / len(note_totale), 2)
+    return None
+
+
 @app.template_filter('format_date')
 def format_date(value):
     luni = [
@@ -29,10 +39,21 @@ def get_note():
     ''')
     rows = c.fetchall()
     conn.close()
+    
     data = {}
+    toate_notele = []
+
     for materie, nota, data_nota in rows:
         data.setdefault(materie, []).append({'nota': nota, 'data': data_nota})
-    return data
+        toate_notele.append(nota)
+
+    if toate_notele:
+        media = round(sum(toate_notele) / len(toate_notele), 2)
+    else:
+        media = None  # sau 0.0, după preferință
+
+    return data, media
+
 
 
 def get_absente():
@@ -57,8 +78,14 @@ def get_absente():
 
 @app.route('/')
 def note():
-    note_pe_materii = get_note()
-    return render_template('note.html', elev_nume="Țiplea Mariana-Alexandra", note=note_pe_materii)
+    note_pe_materii, media = get_note()
+    return render_template(
+        'note.html',
+        elev_nume="Țiplea Mariana-Alexandra",
+        note=note_pe_materii,
+        media=media  # <- trimitem media în template
+    )
+
 
 @app.route('/absente')
 def absente():
