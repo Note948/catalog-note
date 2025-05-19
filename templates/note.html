@@ -46,13 +46,9 @@
   <!-- CONȚINUT -->
   <div class="container my-4">
     <h2 class="text-center text-danger">Note pentru {{ elev_nume }}</h2>
-    {% if media %}
-      <p class="text-center fs-5 text-dark"> 
-        Medie Elev: <strong>{{ "%.2f"|format(media) }}</strong>{% if media == 4.75 %} → <strong>5.00</strong>{% endif %}
-      </p>
-    {% endif %}
+    
     <div class="accordion" id="noteAccordion">
-      {% for materie, note_list in note.items() %}
+      {% for materie, detalii in note.items() %}
         <div class="accordion-item">
           <h2 class="accordion-header" id="heading{{ loop.index }}">
             <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}">
@@ -61,9 +57,14 @@
           </h2>
           <div id="collapse{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#noteAccordion">
             <div class="accordion-body">
-              {% if note_list %}
+              <p class="fw-semibold">
+                Medie: 
+                <strong>{{ "%.2f"|format(detalii.media) }}</strong>
+                {% if detalii.media == 4.75 %} → <strong>5.00</strong>{% endif %}
+              </p>
+              {% if detalii.note %}
                 <ul class="list-group">
-                  {% for nota in note_list %}
+                  {% for nota in detalii.note %}
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                       Nota: <strong>{{ nota.nota }}</strong>
                       <span class="text-muted">la data: {{ nota.data }}</span>
