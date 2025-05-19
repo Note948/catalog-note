@@ -127,7 +127,7 @@ note_demo_raw = [
     (1, 'Geografie', 10, 1, '2025-05-12'),
     (1, 'Limba Franceză', 7,1,'2025-04-10'),
     (1, 'Matematică', 7,1,'2025-01-28'),
-    (1, 'Psihologie', 10,'2025-04-09')
+    (1, 'Psihologie', 10,1, '2025-04-09')
 ]
 
 note_demo = []
@@ -246,50 +246,50 @@ absente_demo_raw = [
     (1, 'Religie', '2024-11-22', 1),
     (1, 'Religie', '2024-10-04', 1),
     (1, 'Tehnologia Informației Și A Comunicațiilor', '2025-01-21', 1),
-    (1, 'Psihologie', '2025-03-11', 1)
+    (1, 'Psihologie', '2025-03-11', 1),
 # Nou
-    (1, ('Matematică'), '2025-05-12', 1),
-    (1, ('Matematică'), '2025-05-13', 1),
-    (1, ('Matematică'), '2025-05-14', 1),
-    (1, ('Matematică'), '2025-05-15', 1),
+    (1, 'Matematică', '2025-05-12', 1),
+    (1, 'Matematică', '2025-05-13', 1),
+    (1, 'Matematică', '2025-05-14', 1),
+    (1, 'Matematică', '2025-05-15', 1),
     # Biologie
-    (1, ('Biologie'), '2025-05-14', 1),
-    (1, ('Biologie'), '2025-05-15', 1),
+    (1, 'Biologie', '2025-05-14', 1),
+    (1, 'Biologie', '2025-05-15', 1),
     # Informatică
-    (1, ('Informatică'), '2025-05-15', 1),
+    (1, 'Informatică', '2025-05-15', 1),
     # Educație Fizică
-    (1, ('Educație Fizică'), '2025-05-12', 1),
-    (1, ('Educație Fizică'), '2025-05-15', 1),
+    (1, 'Educație Fizică', '2025-05-12', 1),
+    (1, 'Educație Fizică', '2025-05-15', 1),
     # Limba Engleză
-    (1, ('Limba Engleză'), '2025-05-09', 1),
-    (1, ('Limba Engleză'), '2025-05-12', 1),
-    (1, ('Limba Engleză'), '2025-05-12', 1),
-    (1, ('Limba Engleză'), '2025-05-14', 1),
-    (1, ('Limba Engleză'), '2025-05-14', 1),
-    (1, ('Limba Engleză'), '2025-05-16', 1),
+    (1, 'Limba Engleză', '2025-05-09', 1),
+    (1, 'Limba Engleză', '2025-05-12', 1),
+    (1, 'Limba Engleză', '2025-05-12', 1),
+    (1, 'Limba Engleză', '2025-05-14', 1),
+    (1, 'Limba Engleză', '2025-05-14', 1),
+    (1, 'Limba Engleză', '2025-05-16', 1),
     # Limba Română
-    (1, ('Limba Română'), '2025-05-09', 1),
-    (1, ('Limba Română'), '2025-05-12', 1),
-    (1, ('Limba Română'), '2025-05-13', 1),
-    (1, ('Limba Română'), '2025-05-16', 1),
+    (1, 'Limba Română', '2025-05-09', 1),
+    (1, 'Limba Română', '2025-05-12', 1),
+    (1, 'Limba Română', '2025-05-13', 1),
+    (1, 'Limba Română', '2025-05-16', 1),
     # Fizică
-    (1, ('Fizică'), '2025-05-09', 1),
-    (1, ('Fizică'), '2025-05-13', 1),
-    (1, ('Fizică'), '2025-05-14', 1),
-    (1, ('Fizică'), '2025-05-16', 1),
+    (1, 'Fizică', '2025-05-09', 1),
+    (1, 'Fizică', '2025-05-13', 1),
+    (1, 'Fizică', '2025-05-14', 1),
+    (1, 'Fizică', '2025-05-16', 1),
     # Chimie
-    (1, ('Chimie'), '2025-05-12', 1),
-    (1, ('Chimie'), '2025-05-15', 1),
+    (1, 'Chimie', '2025-05-12', 1),
+    (1, 'Chimie', '2025-05-15', 1),
     # Limba Franceză
-    (1, ('Limba Franceză'), '2025-05-13', 1),
-    (1, ('Limba Franceză'), '2025-05-15', 1),
+    (1, 'Limba Franceză', '2025-05-13', 1),
+    (1, 'Limba Franceză', '2025-05-15', 1),
     # Istoria Marii Britanii Și A Sua
-    (1, ('Istoria Marii Britanii Și A Sua'), '2025-05-15', 1),
+    (1, 'Istoria Marii Britanii Și A Sua', '2025-05-15', 1),
     # Religie
-    (1, ('Religie'), '2025-05-09', 1),
-    (1, ('Religie'), '2025-05-16', 1),
+    (1, 'Religie', '2025-05-09', 1),
+    (1, 'Religie', '2025-05-16', 1),
     # Istorie
-    (1, ('Istorie'), '2025-05-16', 1),
+    (1, 'Istorie', '2025-05-16', 1),
 ]
 
 
