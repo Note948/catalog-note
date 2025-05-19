@@ -4,22 +4,15 @@ import sqlite3
 
 app = Flask(__name__)
 
-def calculeaza_media(note_dict):
-    note_totale = []
-    for lista in note_dict.values():
-        for n in lista:
-            note_totale.append(n['nota'])
-    if note_totale:
-        return round(sum(note_totale) / len(note_totale), 2)
-    return None
-
+def calculeaza_media(lista_note):
+    if not lista_note:
+        return None
+    return round(sum(lista_note) / len(lista_note), 2)
 
 @app.template_filter('format_date')
 def format_date(value):
-    luni = [
-        '', 'ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie',
-        'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'
-    ]
+    luni = ['', 'ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie',
+            'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie']
     try:
         date_obj = datetime.strptime(value, "%Y-%m-%d")
         return f"{date_obj.day} {luni[date_obj.month]} {date_obj.year}"
@@ -39,21 +32,14 @@ def get_note():
     ''')
     rows = c.fetchall()
     conn.close()
-    
     data = {}
     for materie, nota, data_nota in rows:
-        data.setdefault(materie, {'note': [], 'media': 0})
+        data.setdefault(materie, {'note': [], 'media': None})
         data[materie]['note'].append({'nota': nota, 'data': data_nota})
-    
     for materie in data:
-        note = [n['nota'] for n in data[materie]['note']]
-        if note:
-            media = round(sum(note) / len(note), 2)
-            data[materie]['media'] = media
-
+        note_val = [n['nota'] for n in data[materie]['note']]
+        data[materie]['media'] = calculeaza_media(note_val)
     return data
-
-
 
 
 def get_absente():
@@ -69,27 +55,19 @@ def get_absente():
     rows = c.fetchall()
     conn.close()
     absente_pe_materii = {}
-    for materie, data, motivata in rows:
-        absente_pe_materii.setdefault(materie, []).append({
-            'data': data,
-            'motivata': bool(motivata)
-        })
+    for materie, data_nota, motivata in rows:
+        absente_pe_materii.setdefault(materie, []).append({'data': data_nota, 'motivata': bool(motivata)})
     return absente_pe_materii
 
 @app.route('/')
 def note():
-    note_pe_materii, media = get_note()
-    return render_template(
-        'note.html',
-        elev_nume="Țiplea Mariana-Alexandra",
-        note=note_pe_materii,
-    )
-
+    note_pe_materii = get_note()
+    return render_template('note.html', elev_nume="Tiplea Mariana-Alexandra", note=note_pe_materii)
 
 @app.route('/absente')
 def absente():
     absente_elev = get_absente()
-    return render_template('absente.html', elev_nume="Țiplea Mariana-Alexandra", absente=absente_elev)
+    return render_template('absente.html', elev_nume="Tiplea Mariana-Alexandra", absente=absente_elev)
 
 if __name__ == '__main__':
     app.run(debug=True)
