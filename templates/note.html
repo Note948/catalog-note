@@ -46,6 +46,11 @@
   <!-- CONȚINUT -->
   <div class="container my-4">
     <h2 class="text-center text-danger">Note pentru {{ elev_nume }}</h2>
+    {% if media %}
+      <p class="text-center fs-5 text-dark"> 
+        Medie Elev: <strong>{{ "%.2f"|format(media) }}</strong>{% if media == 4.75 %} → <strong>5.00</strong>{% endif %}
+      </p>
+    {% endif %}
     <div class="accordion" id="noteAccordion">
       {% for materie, note_list in note.items() %}
         <div class="accordion-item">
