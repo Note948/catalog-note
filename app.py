@@ -41,18 +41,18 @@ def get_note():
     conn.close()
     
     data = {}
-    toate_notele = []
-
     for materie, nota, data_nota in rows:
-        data.setdefault(materie, []).append({'nota': nota, 'data': data_nota})
-        toate_notele.append(nota)
+        data.setdefault(materie, {'note': [], 'media': 0})
+        data[materie]['note'].append({'nota': nota, 'data': data_nota})
+    
+    for materie in data:
+        note = [n['nota'] for n in data[materie]['note']]
+        if note:
+            media = round(sum(note) / len(note), 2)
+            data[materie]['media'] = media
 
-    if toate_notele:
-        media = round(sum(toate_notele) / len(toate_notele), 2)
-    else:
-        media = None  # sau 0.0, după preferință
+    return data
 
-    return data, media
 
 
 
@@ -83,7 +83,6 @@ def note():
         'note.html',
         elev_nume="Țiplea Mariana-Alexandra",
         note=note_pe_materii,
-        media=media  # <- trimitem media în template
     )
 
 
