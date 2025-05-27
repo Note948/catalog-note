@@ -137,7 +137,7 @@ note_demo_raw = [
     (1, 'Geografie', 10, 1, '2025-05-12'),
     (1, 'Limba Franceză', 7,1,'2025-04-10'),
     (1, 'Matematică', 7,1,'2025-01-28'),
-    (1, 'Psihologie', 10,'2025-04-09')
+    (1, 'Psihologie', 10,1,'2025-04-09')
 ]
 
 note_demo = []
@@ -256,7 +256,7 @@ absente_demo_raw = [
     (1, 'Religie', '2024-11-22', 1),
     (1, 'Religie', '2024-10-04', 1),
     (1, 'Tehnologia Informației Și A Comunicațiilor', '2025-01-21', 1),
-    (1, 'Psihologie', '2025-03-11', 1)
+    (1, 'Psihologie', '2025-03-11', 1),
 # Nou
     (1, ('Matematică'), '2025-05-12', 1),
     (1, ('Matematică'), '2025-05-13', 1),
