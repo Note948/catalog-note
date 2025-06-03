@@ -64,6 +64,7 @@ def get_materie_id(nume):
     return c.fetchone()[0]
 
 note_demo_raw = [
+    (1, 'Arte Vizuale și Abilități Practice', 10, 1, '2025-06-03'),
     (1, 'Arte Vizuale și Abilități Practice', 10, 1, '2025-03-18'),
     (1, 'Arte Vizuale și Abilități Practice', 10, 1, '2025-03-18'),
     (1, 'Arte Vizuale și Abilități Practice', 10, 1, '2024-12-17'),
@@ -86,6 +87,7 @@ note_demo_raw = [
     (1, 'Fizică', 10, 1, '2025-02-04'),
     (1, 'Fizică', 10, 1, '2024-11-29'),
     (1, 'Fizică', 9, 1, '2024-09-20'),
+    (1, 'Geografie', 10, 1, '2025-06-02'),
     (1, 'Geografie', 10, 1, '2025-03-31'),
     (1, 'Geografie', 9, 1, '2024-11-25'),
     (1, 'Istoria Marii Britanii Și A Sua',  10, 1, '2025-05-15'),
@@ -139,7 +141,8 @@ note_demo_raw = [
     (1, 'Geografie', 10, 1, '2025-05-12'),
     (1, 'Limba Franceză', 7,1,'2025-04-10'),
     (1, 'Matematică', 7,1,'2025-01-28'),
-    (1, 'Psihologie', 10,1,'2025-04-09')
+    (1, 'Psihologie', 10,1,'2025-04-09'),
+    (1, 'Psihologie', 10,1,'2025-06-03')
 ]
 
 note_demo = []
